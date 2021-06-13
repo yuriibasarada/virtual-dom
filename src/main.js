@@ -22,8 +22,6 @@ let count = 0;
 let vApp = createVApp(count)
 const $app =  render(vApp)
 
-console.log($app)
-
 let $rootEl = mount($app, document.getElementById('app'))
 
 setInterval(() => {

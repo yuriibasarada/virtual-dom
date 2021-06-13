@@ -1,0 +1,23 @@
+#app .container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#app .header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#app .header-container img {
+    max-width: 70px;
+    object-fit: contain;
+    height: auto;
+}
+
+#app .header-container ul  {
+    display: flex;
+}
+#app .header-container ul li {
+    margin-left: 20px;
+    list-style-type: none;
+}

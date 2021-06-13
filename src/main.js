@@ -2,17 +2,31 @@ import createElement from "../vdom/createElement";
 import render from "../vdom/render";
 import mount from "../vdom/mount";
 import diff from '../vdom/diff'
+import header from "../components/header";
+
+const menuItems = [
+    {id: 1, title: 'Home', link: '/home'},
+    {id: 1, title: 'About', link: '/about-us'},
+    {id: 1, title: 'Products', link: '/products'},
+    {id: 1, title: 'Contact Us', link: '/contact-us'}
+]
+
 const createVApp = (count) => createElement('div', {
     attrs: {
         id: 'app',
         dataCount: count
     },
     children: [
+        header(menuItems),
+        createElement('span', {
+            children: [
+                String(count)
+            ]
+        }),
         createElement('input'),
-        String(count),
         createElement('img', {
             attrs: {
-                src: 'https://media.giphy.com/media/dpSrm4cwUmCeQ/giphy.gif'
+                src: 'https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300'
             }
         })
     ]
